@@ -12,8 +12,9 @@ import com.redhat.summit2019.model.Adjective;
  */
 @Path("/")
 public interface AdjectiveService {
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/adjective")
+    @Path("/api/adjective")
     Adjective getAdjective();
 }

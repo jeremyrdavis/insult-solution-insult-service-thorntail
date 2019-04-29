@@ -28,7 +28,7 @@ public class InsultResource{
 
     @GET
     @Path("/insult")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces("application/json")
     public String getInsult() throws Exception {
 
         ResteasyClient nounClient = new ResteasyClientBuilder().build();
@@ -42,6 +42,9 @@ public class InsultResource{
         return new Insult(adjService.getAdjective(),
             adjService.getAdjective(),
             nounService.getNoun()).toString();
+/*
+        return "Foo, bar, baz!";
+*/
     }
 
 }

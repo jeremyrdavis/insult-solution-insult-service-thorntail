@@ -12,9 +12,10 @@ import com.redhat.summit2019.model.Noun;
  */
 @Path("/")
 public interface NounService {
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/noun")
+    @Path("/api/noun")
     Noun getNoun();
 
 }
