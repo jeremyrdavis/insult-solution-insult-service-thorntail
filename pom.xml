@@ -42,6 +42,7 @@
     <version.maven-war-plugin>3.2.2</version.maven-war-plugin>
     <version.restassured>3.3.0</version.restassured>
     <version.resteasy>3.6.2.Final</version.resteasy>
+    <version.wiremock>2.23.2</version.wiremock>
     <version.thorntail>2.4.0.Final-redhat-00013</version.thorntail>
     <fabric8.generator.from>registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:1.6</fabric8.generator.from>
   </properties>
@@ -124,7 +125,13 @@
       <groupId>org.jboss.resteasy</groupId>
       <artifactId>resteasy-client</artifactId>
       <version>${version.resteasy}</version>
-      <scope>test</scope>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.github.tomakehurst</groupId>
+        <artifactId>wiremock-jre8</artifactId>
+        <version>${version.wiremock}</version>
+        <scope>test</scope>
     </dependency>
   </dependencies>
   <repositories>
